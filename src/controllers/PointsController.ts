@@ -18,6 +18,15 @@ class PointsController {
         return response.json(points);
     }
 
+    async indexAll(request: Request, response: Response){
+        const points = await knex('points')
+        .join('point_Items', 'points.id', '=', 'point_items.point_id')
+        .distinct()
+        .select('points.*');
+
+        return response.json(points);
+    }
+
     async show(request: Request, response: Response){
         const { id } = request.params;
 

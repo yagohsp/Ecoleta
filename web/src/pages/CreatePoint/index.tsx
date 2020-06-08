@@ -104,7 +104,7 @@ const CreatePoint = () => {
         const uf = selectedUf;
         const city = selectedCity
         const [latitude, longitude] = selectedPosition;
-        const items = selectedItems;
+        const items = selectedItems; 
 
         const data = {
             name, email, whatsapp, uf, city, latitude, longitude, items

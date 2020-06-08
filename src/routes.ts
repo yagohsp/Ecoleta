@@ -14,6 +14,7 @@ routes
 routes
 .post('/points', pointsController.create)
 .get('/points', pointsController.index)
+.get('/allpoints', pointsController.indexAll)
 .get('/points/:id', pointsController.show);
 
 
